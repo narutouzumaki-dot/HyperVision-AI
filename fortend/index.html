@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="HyperVision AI — your holographic personal assistant.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>HyperVision AI</title>
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><img src="assets/icon.png" alt="" class="brand-icon"><div><h1>HYPERVISION</h1><p>PERSONAL AI SYSTEM</p></div></div>
+      <div class="status"><span class="status-dot"></span><span id="connectionStatus">UI READY</span></div>
+    </header>
+
+    <section class="welcome"><p class="eyebrow">YOUR INTELLIGENCE PARTNER</p><h2>Welcome back, <span>Boss.</span></h2><p class="muted">Your assistant is standing by.</p></section>
+
+    <section class="core-stage" aria-label="HyperVision AI visual core">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+      <div class="core"><div class="core-inner">Λ</div></div>
+      <div class="core-caption">HYPER CORE</div>
+    </section>
+
+    <section class="glass-card status-card">
+      <div class="section-heading"><span class="spark">✦</span> ASSISTANT STATUS</div>
+      <p id="assistantGreeting" class="assistant-greeting">Hello, Boss. I'm HyperVision AI. Set your Worker URL in the configuration file to connect Gemini.</p>
+      <div class="model-row"><div><span class="field-label">AI MODEL</span><small id="modelStatus">Backend not configured</small></div><select id="modelSelect" aria-label="Choose Gemini model"><option value="auto">Auto select</option></select></div>
+    </section>
+
+    <section class="quick-actions" aria-label="Quick actions">
+      <button class="action-card" id="voiceAction"><span>◉</span><b>Voice AI</b><small>Speak with me</small></button>
+      <button class="action-card" id="phoneAction"><span>▣</span><b>Phone tools</b><small>Supported actions</small></button>
+      <button class="action-card" id="studyAction"><span>✧</span><b>Study mode</b><small>Learn step by step</small></button>
+    </section>
+
+    <section class="glass-card chat-card">
+      <div class="chat-title-row"><div class="section-heading"><span class="spark">✦</span> HYPERVISION CHAT</div><button id="clearChat" class="text-button" type="button">Clear</button></div>
+      <div id="chatLog" class="chat-log" aria-live="polite"><div class="message assistant"><span class="message-label">HYPERVISION</span><p>Ready when you are, Boss. Configure the backend to start an AI conversation.</p></div></div>
+      <form id="chatForm" class="composer"><input id="messageInput" autocomplete="off" maxlength="12000" placeholder="Ask me anything, Boss..." aria-label="Message" required><button class="send-button" type="submit" aria-label="Send message">➤</button></form>
+      <button id="micButton" class="mic-button" type="button">🎙 &nbsp; Speak to HyperVision</button>
+      <p id="voiceStatus" class="voice-note">VOICE FEATURES DEPEND ON YOUR BROWSER</p>
+    </section>
+
+    <section class="glass-card config-card">
+      <div class="section-heading"><span class="spark">✦</span> CONNECTION SETTINGS</div>
+      <p class="muted config-help">Enter the URL of your separately deployed Cloudflare Worker. Do not enter API keys here.</p>
+      <form id="workerForm" class="worker-form"><input id="workerUrlInput" type="url" placeholder="https://your-worker.workers.dev" aria-label="Cloudflare Worker URL"><button type="submit">Save URL</button></form>
+      <p id="configStatus" class="voice-note">Worker URL is saved only in this browser.</p>
+    </section>
+    <footer>HYPERVISION AI <span>•</span> HOLOGRAPHIC FUTURISM</footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

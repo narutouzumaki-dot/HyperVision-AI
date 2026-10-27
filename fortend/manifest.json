@@ -1,0 +1,13 @@
+{
+  "name": "HyperVision AI",
+  "short_name": "HyperVision",
+  "description": "Your holographic personal AI assistant.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [
+    { "src": "assets/icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
