@@ -1,0 +1,5 @@
+name = "hypervision-ai-worker"
+main = "src/index.js"
+compatibility_date = "2026-10-27"
+
+# Set GEMINI_API_KEY as a secret in Cloudflare; do not place it in this file.
